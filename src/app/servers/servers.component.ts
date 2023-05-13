@@ -12,9 +12,14 @@ import { Component } from '@angular/core';
 })
 export class ServersComponent {
   allowNewServer = false;
+  serverCreationStatus: string = 'No server is created';
+
   constructor() {
     setTimeout(()=> {
       this.allowNewServer = true;
     }, 2000)
   }
+  onCreateServer() {
+    return this.serverCreationStatus = 'Server created';
+}
 }
