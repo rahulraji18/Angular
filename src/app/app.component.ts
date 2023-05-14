@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name = 'rahul';
+  server = false;
+  collections = [];
+  onToogleDetails() {
+    this.collections.push((this.collections.length)+1);
+    return this.server = !this.server;
+  }
 }

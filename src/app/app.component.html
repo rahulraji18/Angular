@@ -1,1 +1,17 @@
-<h1>Welcome!</h1>
+<div class="container p-4">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-secondary" (click)="onToogleDetails()">
+        Display Details
+      </button>
+      <p *ngIf="server">Secret password is: agent1101</p>
+      <p
+        *ngFor="let data of collections"
+        [ngStyle]="{ backgroundColor: data >= 5 ? 'blue' : 'transparent' }"
+        [ngClass]="{ 'while-text': data >= 5 }"
+      >
+        {{ data }}
+      </p>
+    </div>
+  </div>
+</div>
