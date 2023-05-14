@@ -8,18 +8,21 @@ import { Component } from '@angular/core';
   // <app-server></app-server>
   // <app-server></app-server>`,
   templateUrl: './servers.component.html',
-  styleUrls: ['./servers.component.css']
+  styleUrls: ['./servers.component.css'],
 })
 export class ServersComponent {
   allowNewServer = false;
   serverCreationStatus: string = 'No server is created';
-
+  serverName = '';
   constructor() {
-    setTimeout(()=> {
+    setTimeout(() => {
       this.allowNewServer = true;
-    }, 2000)
+    }, 2000);
   }
   onCreateServer() {
-    return this.serverCreationStatus = 'Server created';
-}
+    return (this.serverCreationStatus = 'Server created');
+  }
+  onUpdateServerName(event: any) {
+    this.serverName = (<HTMLInputElement>event.target).value
+  }
 }
