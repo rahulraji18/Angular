@@ -7,3 +7,8 @@ emmet => extenstion
 
 ========================================================================================
 <!-- Directives => It is instructions in DOM -->
+> *ngIf
+> else
+> ngStyle
+> ngClass
+> *ngFor
