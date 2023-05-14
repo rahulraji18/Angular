@@ -6,9 +6,9 @@
       </button>
       <p *ngIf="server">Secret password is: agent1101</p>
       <p
-        *ngFor="let data of collections"
-        [ngStyle]="{ backgroundColor: data >= 5 ? 'blue' : 'transparent' }"
-        [ngClass]="{ 'while-text': data >= 5 }"
+        *ngFor="let data of collections; let i=index"
+        [ngStyle]="{ backgroundColor: i >= 4 ? 'blue' : 'transparent' }"
+        [ngClass]="{ 'while-text': i >= 4 }"
       >
         {{ data }}
       </p>
