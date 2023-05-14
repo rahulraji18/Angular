@@ -17,10 +17,10 @@ export class ServersComponent {
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
-    }, 2000);
+    }, 6000);
   }
   onCreateServer() {
-    return (this.serverCreationStatus = 'Server created');
+    return (this.serverCreationStatus = 'Server created: Name is: '+ this.serverName);
   }
   onUpdateServerName(event: any) {
     this.serverName = (<HTMLInputElement>event.target).value
